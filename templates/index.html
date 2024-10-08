@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarization Tools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+            background: linear-gradient(to bottom, #000000, #16213e);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 3rem;  /* Reduced title size slightly */
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        .tools {
+            padding: 70px 0;
+            flex-grow: 1;
+        }
+
+        .container {
+            max-width: 1100px; /* Reduced container width */
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .tool-cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #0f3460;
+            border-radius: 15px; /* Slightly smaller radius */
+            padding: 30px;
+            text-align: center;
+            width: 320px; /* Smaller card width */
+            height: 300px; /* Smaller card height */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Reduced shadow for balance */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Inherit text color */
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 80%);
+            animation: rotateGradient 4s infinite linear;
+        }
+
+        .card h3 {
+            font-size: 2rem; /* Reduced heading size */
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            font-size: 1.1rem; /* Reduced paragraph text */
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 12px 25px; /* Slightly smaller button */
+            background-color: #e94560;
+            color: #fff;
+            border: none;
+            border-radius: 8px; /* Smaller button border radius */
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 1.1rem; /* Reduced button text size */
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background-color: #ff636e;
+        }
+
+        footer {
+            background-color: #0f3460;
+            color: #fff;
+            padding: 20px 0; /* Reduced footer padding */
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+            position: relative;
+        }
+
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes rotateGradient {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Media Query for Smaller Screens */
+        @media screen and (max-width: 768px) {
+            .tool-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 400px; /* Adjust card size for small screens */
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-size: 2.5rem; /* Adjust title size for smaller screens */
+            }
+
+            .card h3 {
+                font-size: 1.75rem; /* Adjust heading size for smaller screens */
+            }
+
+            .card p {
+                font-size: 1rem; /* Adjust paragraph text */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Summarization Tools Section -->
+    <section id="tools" class="tools">
+        <div class="container">
+            <h2 class="section-title">Summarization Tools</h2>
+            <div class="tool-cards">
+                <a href="/note" class="card"> <!-- Wrap the card content in an anchor tag -->
+                    <h3>Note Summarization</h3>
+                    <p>Upload your notes and get a concise summary using AI technology.</p>
+                </a> <!-- Closing anchor tag for the first card -->
+                
+                <a href="/web" class="card"> <!-- Wrap the card content in an anchor tag -->
+                    <h3>Website Summarization</h3>
+                    <p>Summarize any webpage content with a single click.</p>
+                </a> <!-- Closing anchor tag for the second card -->
+                
+                <a href="/youtube-summary" class="card"> <!-- Wrap the card content in an anchor tag -->
+                    <h3>YouTube Video Summarization</h3>
+                    <p>Get a summary of your favorite YouTube videos.</p>
+                </a> <!-- Closing anchor tag for the third card -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Summarization Tools. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

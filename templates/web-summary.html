@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter URL for Summary</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:#000;
+            color: #060606; /* Set a black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden; /* Prevent scroll bars */
+        }
+
+        .container {
+            max-width: 1800px; /* Increased container width */
+            padding: 90px; /* Increased padding */
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7); /* Stronger shadow */
+            animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff; /* White text color */
+            margin-bottom: 20px; /* Spacing below header */
+            animation: slideIn 0.5s ease-in-out; /* Slide-in animation */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width:500px;
+        }
+
+        input[type="url"] {
+            width: 100%;
+            padding: 15px; /* Increased padding for the input */
+            margin-bottom: 20px; /* Increased margin for better spacing */
+            border: 2px solid #4CAF50; /* Green border */
+            border-radius: 5px;
+            transition: border-color 0.3s ease; /* Smooth border transition */
+        }
+
+        input[type="url"]:focus {
+            border-color: #81c784; /* Lighter green on focus */
+            outline: none; /* Remove outline */
+            box-shadow: 0 0 5px rgba(129, 199, 132, 0.7); /* Glow effect on focus */
+        }
+
+        .submit-button {
+            padding: 15px 30px; /* Increased button padding */
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            font-size: 16px; /* Increased font size */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Button shadow */
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+            box-shadow: 0 0 20px rgba(72, 187, 84, 0.7); /* Glow effect on hover */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter URL for Summary</h1>
+        <form action="/web_summary" method="post">
+            <input type="url" name="url" placeholder="Enter URL" required>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
