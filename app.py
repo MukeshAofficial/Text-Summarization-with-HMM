@@ -12,7 +12,7 @@ genai.configure(api_key="AIzaSyAbmCYsZsjfCPf-uakFksDglYasW4EsehE")
 app = Flask(__name__)
 
 @app.route('/')
-def index()
+def index():
     return render_template('index.html')
 
 @app.route('/note', methods=['GET', 'POST'])
